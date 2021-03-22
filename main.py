@@ -5,6 +5,7 @@ def multiples_in_range():
     """
     How many multiples of x in y? I don't fucking know and i don't fucking care enough to do it myself.
     """
+    print("="*20)
     x = validate_int_v2("Input range to work with: ", None, 1)
     y = validate_int_v2("Multiple of:  ", None, 1)
 
@@ -23,6 +24,7 @@ def is_square_in_range():
     """
     Regurgitates squares within a set range
     """
+    print("="*20)
     squares = []
     x = validate_int_v2("Input range to work with: ", None, 1)
 
@@ -39,6 +41,7 @@ def is_odd():
     """
     Spits out a list of odd numbers
     """
+    print("="*20)
     odds = []
     x = validate_int_v2("Input range to work with: ", None, 1)
 
@@ -54,6 +57,7 @@ def factor_lookup():
     """
     Finds all the factors of a number
     """
+    print("="*20)
     factor = validate_int_v2("Input factor to work with: ", None, 1)
 
     factors = []
@@ -63,3 +67,27 @@ def factor_lookup():
 
     print(factors)
     print("Number of factors: {}" .format(len(factors)))
+
+def menu():
+    while True:
+        print("="*20)
+        print("1. Multiples in range")
+        print("2. Squares in range")
+        print("3. Factors")
+        print("4. Odds in range")
+        selection = validate_int_v2("Enter selection: ", 4, 1)
+
+        if selection == 1:
+            multiples_in_range()
+        
+        elif selection == 2:
+            is_square_in_range()
+
+        elif selection == 3:
+            factor_lookup()
+        
+        else:
+            is_odd()
+
+menu()
+    
